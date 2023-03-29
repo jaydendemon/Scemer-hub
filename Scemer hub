@@ -154,3 +154,32 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader", true))()
     end
 })
+
+local Tab = Window:MakeTab({
+	Name = "Settings/Credits",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Settings"
+})
+
+Tab:AddButton({
+	Name = "Destroy Gui",
+	Callback = function()
+    OrionLib:Destroy()
+    end
+})
+
+local Section = Tab:AddSection({
+	Name = "Credits"
+})
+
+Tab:AddButton({
+	Name = "Discord",
+	Callback = function()
+    https://discord.gg/jb4Zk9fR4w
+    end
+})
+
+
