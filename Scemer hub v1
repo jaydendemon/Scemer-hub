@@ -1,5 +1,4 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
 local Window = OrionLib:MakeWindow({Name = "Scemer Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Config"})
 
 local Tab = Window:MakeTab({
@@ -77,15 +76,6 @@ Tab:AddButton({
         setconstant(Module,34,function()
            game:GetService("RunService").Heartbeat:Wait()
         end)
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Fly Press E",
-	Callback = function()
-       -- Press "E" to fly and unfly
-       -- You have to re-apply the script if you die
-      loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
   	end    
 })
 
@@ -182,6 +172,4 @@ Tab:AddButton({
     https://discord.gg/jb4Zk9fR4w
     end
 })
-
-
-
+OrionLib:Init()
