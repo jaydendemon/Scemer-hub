@@ -172,4 +172,3 @@ Tab:AddButton({
     https://discord.gg/jb4Zk9fR4w
     end
 })
-OrionLib:Init()
