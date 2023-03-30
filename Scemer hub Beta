@@ -144,3 +144,165 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader", true))()
     end
 })
+
+Tab:AddButton({
+    Name = "Natural Disaster",
+    Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ngr123/nds-script/main/nds%20script.lua'))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Da hood",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mrhackerman35297/AgentCC/main/Launch.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Pls Donate",
+    Callback = function()
+    loadstring(game:HttpGet('https://tubhub.cloud/scripts/prettyplease.lua', true))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Frontlines",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SomacYT/better-script-frontline/main/Frontline%20somac%20hub%20v2"))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Drive World",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BrickPlayz/Public-Scripts/main/DriveWorld.lua"))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Squid Game",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LilFrench21/Hecta/main/Script/Squid%20Game"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Zombie Attack",
+    Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Arsenal",
+    Callback = function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"), true))()
+    end
+})
+
+Tab:AddButton({
+    Name = "Driving Empire",
+    Callback = function()
+        local BlekLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
+
+        local win = BlekLib:Create({
+            Name = "Scemer Driving Empire Boost",
+            StartupSound = {
+                Toggle = true,
+                SoundID = "rbxassetid://6958727243",
+                TimePosition = 1
+            }
+        })
+        
+        local maintab = win:Tab('Main')
+        local creditstab = win:Tab('Credits')
+        
+        maintab:Button('BOOST EM', function()
+            
+        
+        local uis = game:GetService("UserInputService")
+        local holdingw = false
+        local holdings = false
+        
+        local vectorForce
+        local vectorForce2
+        
+        for i, v in pairs(game:GetService("Workspace").Vehicles:GetChildren()) do
+            if tostring(v.Name) == game:GetService("Players").LocalPlayer.Name then 
+                    local attachment = Instance.new("Attachment")
+                    attachment.CFrame = v.PlateCenter.CFrame
+        attachment.Parent = v.PlateCenter
+        
+        vectorForce = Instance.new("VectorForce")
+        vectorForce.Parent = v.PlateCenter
+        vectorForce.Force = Vector3.new(0, 0, 0)
+        vectorForce.RelativeTo = Enum.ActuatorRelativeTo.Attachment0
+        vectorForce.Attachment0 = attachment
+        vectorForce.ApplyAtCenterOfMass = true
+            end
+        end
+        
+        function boost()
+            for i, v in pairs(game:GetService("Workspace").Vehicles:GetChildren()) do
+                if tostring(v.Name) == game:GetService("Players").LocalPlayer.Name then 
+                    vectorForce.Force = Vector3.new(15000,0,0)
+                end
+            end
+        end
+        
+        
+        uis.InputBegan:Connect(function(inpt)
+            if inpt.KeyCode == Enum.KeyCode.W then
+                holdingw = true
+            end
+        end)
+        
+        uis.InputEnded:Connect(function(inpt)
+            if inpt.KeyCode == Enum.KeyCode.W then
+                holdingw = false
+            end
+        end)
+        
+        while wait() do 
+            print(holdingw)
+            if holdingw then
+                boost()
+            else 
+                vectorForce.Force = Vector3.new(0, 0, 0)
+            end
+        end
+        
+        
+        
+        end)
+    end
+})
+
+Tab:AddButton({
+    Name = "Meepcity",
+    Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/ToddyGui/main/Loader.lua'))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Bubble Gum Clicker",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ev01Discord/CocoHZ/main/CocoH%20v1.01"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "BrookHaven Rp",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))() 
+    end
+})
+
+Tab:AddButton({
+    Name = "Murder Mystery",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/F2B-HUB/F2B/main/HUB"))() 
+    end
+})
